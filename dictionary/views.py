@@ -11,15 +11,16 @@ def index(request):
           word_up = Reaction.objects.get(word=data[1]).upvote
           word_down = Reaction.objects.get(word=data[1]).downvote
      except:
-          pass
+          word_down = 0
+          word_up = 0
      
      return render(request, "index.html", {
           "word": data[1],
           "type": data[2],
           "definition": data[4],
           "title": "Discover Words",
-          "upvote": upvote,
-          "downvote": downvote})
+          "upvote": word_up,
+          "downvote": word_down})
 
 def word(request, word):
      data = operation.select_word(word.lower())
