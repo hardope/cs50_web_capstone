@@ -1,0 +1,3 @@
+django
+sqlite3
+random

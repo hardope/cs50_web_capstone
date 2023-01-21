@@ -13,9 +13,6 @@ def get_random():
      a = random.randint(0, len(words))
      return words[a]
 
-def find_word(search):
-     return query_db(f"SELECT * FROM words where word LIKE '{search}%' LIMIT 100")
-
 def select_word(query):
      word = query_db(f"SELECT * FROM words WHERE word == '{query}'")
      i = 1
@@ -27,13 +24,3 @@ def select_word(query):
      elif len(word) < 1:
           return "Not Found"
      return word[0]
-
-def list_words(query):
-     try:
-          words = query_db("SELECT * FROM words")
-          words_list = []
-          for i in range(10):
-               words_list.append(words[i+int(query)])
-          return words_list
-     except:
-          return "Invalid Query."
