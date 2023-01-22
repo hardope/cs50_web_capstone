@@ -6,7 +6,7 @@ Cs50 web Final project
 
 This is a single page online dictonary we application used for searching words.
 ### Languages Used In Development
-* Python
+* python
 * Django
 * JavaScript
 * CSS
@@ -17,7 +17,7 @@ on loading the default page a random word is selected and displayed alongside it
 
 The Search textbox is used to find words. After The search button is filled and a request is sent to the server, the view in question fetches the user input and redirects to the view word route<br>
 
-There's also the Upvote and Downvote button which calls respective javascript functionss to send a request to update the server data. The purpose of this function is to enable users to tell if a definition is correct or not depending on the ratio of upvote to downvotes provided byy people who previously viewed the words and its definition
+There's also the Upvote and Downvote button which calls respective javascript functions to send a request to update the server data. The purpose of this function is to enable users to tell if a definition is correct or not depending on the ratio of upvote to downvotes provided by people who previously viewed the words and its definition
 
 # Distinctiveness and Complexity
 
@@ -64,7 +64,7 @@ run the following command snipet in project root directory
 ```
 
 ``` bash
-# Install Modules
+# Run server
 ~ $ python manage.py runserver
 
 ```
