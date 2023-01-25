@@ -1,10 +1,15 @@
-# CS50-Web-capstone
+# CS50-Web-capstone Project By Opeouwa Adeyeri
 
 Cs50 web Final project
 
-## Dictionary
+---
 
-This is a single page online dictonary we application used for searching words.
+## About
+
+This project is a single page web application used to check word definition and type. This project makes use of SQLite3 Database management system to store a dictionary of over 115,000 words and also makes use of The default Django Models to store the upvotes and downvotes.
+
+---
+
 ### Languages Used In Development
 * python
 * Django
@@ -12,18 +17,17 @@ This is a single page online dictonary we application used for searching words.
 * CSS
 * SQLite3
 
-### details:
-on loading the default page a random word is selected and displayed alongside its definition and word type. This is achieved by calling some functions from the operations.py file, a word is returned along side its meaning and definition, The word is then passed Into the Html file using Jinja templating engine.<br>
-
-The Search textbox is used to find words. After The search button is filled and a request is sent to the server, the view in question fetches the user input and redirects to the view word route<br>
-
-There's also the Upvote and Downvote button which calls respective javascript functions to send a request to update the server data. The purpose of this function is to enable users to tell if a definition is correct or not depending on the ratio of upvote to downvotes provided by people who previously viewed the words and its definition
+---
 
 # Distinctiveness and Complexity
 
-I am convinced that my project satisfies the distinctiveness and complexity requirements because it is not similar in any way to any of the web applications we have developed so far. 
+I am convinced that my project satisfies the distinctiveness requirements because it is not similar in any way to any of the web applications we have developed so far.<br>
 
-### The web applications we have developed so far:
+I believe this project satisfies the complexity requiment for several reasons. One of the requirements states that the project must utilize Django (using at least One model) on the back-end and JavaScript on the front-end, This requirement is met as I used the Django Framework and used the Reaction Model to store the upvotes and downvotes for each word in the dictionary. Also JavaScript is used on the front-end to send an Http request to the backend to update the upvote or downvote and edit the values displayed on the pages in respect to the button clicked.
+
+---
+
+### The web applications Developed During Cs50WEB:
 
 * A Google search clone
 * A project similar to wikipedia that enables us to create an article with a markdown system and edit it.
@@ -31,16 +35,47 @@ I am convinced that my project satisfies the distinctiveness and complexity requ
 * A SPA (single page app) - mail app
 * A network App in which we can create/like a post, edit our own post and follow/unfollow other users.
 
-## Files
-* operation.py: This python file contains functions that connect to a database of over 115,000 words and runs several sqlite commands on the database
+---
 
-* urls.py: Contains the available urls in this project and links them to their functions for response
+### Details & usage:
+on loading the default page a random word is selected and displayed alongside its definition and word type. This is achieved by calling some functions from the operations.py file, a word is returned along side its meaning and definition, This word is then passed Into the Html file using Jinja templating engine.<br>
 
-* advancedict.db: is the sqlite database containing all over 115,000 words
+The Search textbox is used to find words. After The search button is filled and a request is sent to the server, the view in question fetches the user input and redirects to the view word route<br>
 
-* admin.py: add the models to admin app
+There's also the Upvote and Downvote button which calls respective javascript functions to send a request to update the server data. The purpose of this function is to enable users to tell if a definition is correct or not depending on the ratio of upvote to downvotes provided by people who previously viewed the words and its definition.
 
-* templates/index.html: The html file to display words
+---
+
+The following is the file structure of the project where I added or modified. Default project files are ommitted.
+
+```
+/ (folder)
+-- (files)
+
+/Capstone - main project folder
+ --README.md - this file
+ --requirements.txt - list of libraries needed to run
+ --advancedict.db - SQLite database to store all words and definition
+ --db.sqlite - SQLite database used by Django to store data in models
+  /Capstone - Django main project folder
+   --settings.py - slightly modified settings
+   --urls.py - path configuration
+  /dictionary - Django Dictionary App
+   /templates
+     -index.html - html page for dictionary
+   /static
+     -index.js - Javascript for front end
+     -styles.css - stylesheet
+   --admin.py - admin settings for model view
+   --operation.py - Functions to run sqlite3 commands and return required Data
+   --models.py - database models
+   --urls.py - all standard HTTP request routing handled here
+   --views.py - code to handle each view
+```
+
+---
+
+<br>
 
 ## Installation
 run the following command snipet in project root directory
@@ -79,45 +114,5 @@ run the following command snipet in project root directory
 ``` bash
 # run command and provide your details as required
 ~ $ python manage.py create superuser
-
-```
-
-# files structure
-
-```
-
-/ (folder)
--- (files)
-
-/capstone
-     /__pycache__
-          ...
-     --__init__.py
-     --asgi.py
-     --settings.py
-     --urls.py
-     --wsgi.py
-/dictionary
-     /__pycache__
-          ...
-     /migrations
-          --__init__.py
-          0001_initial.py
-          0002_rename_reactions_reaction.py
-     /templates
-          index.html
-     __init__.py
-     admin.py - admin
-     apps.py
-     models.py - models
-     operation.py - required functions
-     tests.py
-     urls.py
-     views.py
-advancedict.db
-db.sqlite3
-manage.py
-README.md
-requirements.txt
 
 ```

@@ -1,0 +1,37 @@
+#submit {
+     background-color: powderblue;
+     width: 35px;
+     height: 35px;
+     border-radius: 15px;
+     margin-left: 10px;
+     }
+.search{
+     width: 200px;
+     height: 30px;
+     margin-top: 10px;
+     }
+.buttons{
+     display: inline-flex;
+     }
+.vote {
+     background-color: powderblue;
+     width: 100px;
+     height: 40px;
+     border-radius: 10px;
+     border: none;
+     margin-top: 40px;
+     }
+#body{
+     margin-top: 50px;
+     max-width: 1000px;
+     min-width: 200px;
+     padding: 10px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     width: 1vw - 20;
+     height: 1vh - 60;
+     min-height: 400px;
+     max-height: 800px;
+     background-color: rgb(231, 231, 231);
+     border-radius: 25px;
+     text-align: center;
+     }
