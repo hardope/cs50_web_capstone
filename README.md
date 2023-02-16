@@ -116,3 +116,5 @@ run the following command snipet in project root directory
 ~ $ python manage.py create superuser
 
 ```
+### Video Demo
+[Youtube](https://www.youtube.com/watch?v=YAWSxCcllsw)
